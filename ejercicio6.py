@@ -15,4 +15,8 @@ df1= df.groupby(['genres'])[['movie_facebook_likes']].sum()
 print(df1)
 print("EL GÉNERO CON MÁS LIKES")
 likes= df.groupby(['genres'])[['movie_facebook_likes']].sum()
+pelicula_mas_likes = df.loc[df['movie_facebook_likes'].idxmax(), 'movie_title']
+print(pelicula_mas_likes)
+print(likes['movie_facebook_likes'].idxmax(), end=" ")
 print("Con: ", likes['movie_facebook_likes'].max(), " likes ")
+# TAREA: CALCULAR EL GÉNERO QUE GASTA MÁS DINERO
